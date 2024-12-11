@@ -2,7 +2,7 @@ import { Icons } from "../atomos/Icons"
 
 export const NavBar = () =>{
   return(
-    <nav className="flex justify-center h-8 w-fit mt-5 place-content-center content-center bg-black rounded-full">
+    <nav className="fixed flex justify-center items-center  bg-black rounded-full text-white h-9 mt-5">
       <Icons />
     </nav>
   )
