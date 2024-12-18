@@ -1,9 +1,24 @@
-import { NavBar } from "../celulas/NavBar"
+import React from "react";
+import { ActionButton } from "../atomos/ActionButton";
 
-export const Header = () =>{
-  return(
+export interface HeaderProps{
+  onScrollAboutMe: () => void;
+  onScrollPortfolio: () => void;
+  onScrollSkills: () => void;
+  onScrollContact: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  onScrollAboutMe, onScrollPortfolio, onScrollSkills, onScrollContact
+}) => {
+  return (
     <header className="flex justify-center place-content-center content-center h-fit">
-      <NavBar />
+      <nav className="fixed flex justify-center items-center  bg-black rounded-full text-white space-x-4 h-9 mt-5 px-5">
+        <ActionButton name="About Me" onClick={onScrollAboutMe} />
+        <ActionButton name="Portfolio" onClick={onScrollPortfolio} />
+        <ActionButton name="Skills" onClick={onScrollSkills} />
+        <ActionButton name="Contact" onClick={onScrollContact} />
+      </nav>
     </header>
-  )
+  );
 }
