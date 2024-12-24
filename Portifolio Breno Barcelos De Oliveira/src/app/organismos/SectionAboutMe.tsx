@@ -8,12 +8,15 @@ export const SectionAboutMe = () => {
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8">
           Hello, I'm Breno Barcelos De Oliveira
         </h1>
-        <p className="text-2xl md:text-3xl lg:text-4xl mb-12">
+        <p className="text-2xl md:text-3xl lg:text-4xl mb-6">
           System Analyst & Full-Stack Developer
         </p>
+        <p className="text-xl md:text-2xl lg:text-3xl mb-6">
+          I deliver stunning, user-friendly Websites and Applications
+        </p>
         <div className="flex justify-center space-x-4">
-          <Button name="Let's Talk"/>
-          <ButtonDownload name="Download Resume"/>
+          <Button name="Let's Talk" link="https://wa.me/qr/FTEJ7AJGMRL2H1" />
+          <ButtonDownload name="Download Resume" />
         </div>
         <div className="mt-10 text-center">
           <p className="text-xl md:text-2xl mb-4">Follow me here</p>

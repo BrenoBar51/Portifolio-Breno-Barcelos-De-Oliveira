@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, CardProps } from "../celulas/Card";
 
-interface SectionProps {
+export interface SectionProps {
   title: string;
   cards: CardProps[];
 }
 
-export const SectionSkills: React.FC<SectionProps> = ({ title, cards }) => {
+export const SectionContact: React.FC<SectionProps> = ({ title, cards }) => {
   return (
     <section className="container mx-auto py-16">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white">
