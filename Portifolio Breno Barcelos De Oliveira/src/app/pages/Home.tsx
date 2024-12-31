@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { SectionAboutMe } from "../organismos/SectionAboutMe";
 import { Header } from "../organismos/Header";
-import { SectionPortfolio } from "../organismos/SectionPortfolio";
-import { SectionSkills } from "../organismos/SectionSkills";
 import { Section } from "../celulas/Section";
+import { SectionBody } from "../organismos/SectionBody";
 
 export const Home: React.FC = () => {
   const sectionRefs = {
@@ -23,9 +22,14 @@ export const Home: React.FC = () => {
   };
 
   useEffect(() => {
-    if (sectionRefs.aboutMeRef.current) {
-      console.log(sectionRefs.aboutMeRef.current.offsetHeight);
-    }
+    const handleResize = () => {
+      sectionRefs.aboutMeRef.current?.offsetHeight;
+      sectionRefs.portfolioRef.current?.offsetHeight;
+      sectionRefs.skillsRef.current?.offsetHeight;
+    };
+
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
   }, [sectionRefs]);
 
   return (
@@ -36,25 +40,25 @@ export const Home: React.FC = () => {
         onScrollSkills={() => handleScrollSection(sectionRefs.skillsRef)}
       />
       <Section
-        backgroundColor="bg-gray-900"
+        backgroundColor="bg-section-900"
         ref={sectionRefs.aboutMeRef}
         id="SectionAboutMe"
       >
         <SectionAboutMe />
       </Section>
       <Section
-        backgroundColor="bg-gray-800"
+        backgroundColor="bg-section-800"
         ref={sectionRefs.portfolioRef}
         id="SectionPortfolio"
       >
-        <SectionPortfolio
+        <SectionBody
           title="Portfolio"
           cards={[
             {
               title: "E-Commerce",
               description:
                 "This project consists of building a complete e-commerce using React with Javascript. Development focuses on creating a robust and functional application, exploring React resources for a dynamic and responsive interface, and Javascript for logic and data manipulation. As it is a project that is constantly updated, it serves as a dynamic portfolio, demonstrating the developer's skills and continuous improvement in applying new techniques and solutions in web development.",
-              link: "https://e-commerce-digital-drip-store.vercel.app/",
+              link: "https://github.com/BrenoBar51/Digital-Drip-Store.git",
             },
             {
               title: "Portfolio",
@@ -66,7 +70,7 @@ export const Home: React.FC = () => {
               title: "Snake Game",
               description:
                 "Implementation of the classic snake game, developed as a personal challenge to explore the capabilities of Vanilla JavaScript (without the use of external libraries or frameworks). This project aimed to improve my logical skills and gain practical experience in game development, using exclusively the native resources of the language. The implementation uses the <canvas> element for graphic rendering and the snake's movement logic is based on constant updating of its coordinates. Collision detection was implemented by checking the coordinates of the snake's head with the coordinates of the body and the edges of the canvas.",
-              link: "https://snake-game-simple.vercel.app/",
+              link: "https://github.com/BrenoBar51/Snake-Game.git",
             },
             {
               title: "Calculation Software",
@@ -90,11 +94,11 @@ export const Home: React.FC = () => {
         />
       </Section>
       <Section
-        backgroundColor="bg-gray-900"
+        backgroundColor="bg-section-900"
         ref={sectionRefs.skillsRef}
         id="SectionSkills"
       >
-        <SectionSkills
+        <SectionBody
           title="Skills"
           cards={[
             {
@@ -104,11 +108,13 @@ export const Home: React.FC = () => {
             },
             {
               title: "Back-End",
-              description: "I develop customized back-end solutions with robust languages and architectures for various needs. I create web applications, software and REST APIs with clean code and structured logic, ensuring high performance and scalability.",
+              description:
+                "I develop customized back-end solutions with robust languages and architectures for various needs. I create web applications, software and REST APIs with clean code and structured logic, ensuring high performance and scalability.",
             },
             {
               title: "Games",
-              description: "Game developer with experience in creating 2D and 3D games using Godot, Unity and GameMaker. Proficient in C#.",
+              description:
+                "Game developer with experience in creating 2D and 3D games using Godot, Unity and GameMaker. Proficient in C#.",
             },
           ]}
         />

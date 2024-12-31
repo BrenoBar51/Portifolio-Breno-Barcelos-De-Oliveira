@@ -6,13 +6,13 @@ export interface SectionProps {
   cards: CardProps[];
 }
 
-export const SectionContact: React.FC<SectionProps> = ({ title, cards }) => {
+export const SectionBody: React.FC<SectionProps> = ({ title, cards }) => {
   return (
     <section className="container mx-auto py-16">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white">
+      <h1 className="text-6xl laptop:text-7xl lg-laptop:text-8xl xl-desktop:text-9xl font-bold text-center text-white">
         {title}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6">
+      <div className="grid py-16 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 lg-laptop:grid-cols-4 xl-laptop:grid-cols-5 gap-x-6 gap-y-6">
         {cards.map((card) => (
           <Card key={card.title} {...card} />
         ))}

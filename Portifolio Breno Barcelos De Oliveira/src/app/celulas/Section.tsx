@@ -10,7 +10,7 @@ export interface SectionProps {
 export const Section = React.forwardRef<HTMLDivElement, SectionProps>(({children, backgroundColor, id }, ref) => {
   return (
     <div
-      className={`flex flex-col justify-center items-center w-full ${backgroundColor}`}
+      className={`flex flex-col justify-center items-center w-full m-0 p-0 ${backgroundColor}`}
       ref={ref}
       id={id}
     >
