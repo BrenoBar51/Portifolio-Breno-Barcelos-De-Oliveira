@@ -14,7 +14,7 @@ export const Button: React.FC<ButtonProps> = ({ name, link }) => {
         rel="noopener noreferrer"
         className="block no-underline"
       >
-        <button className="h-10 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
+        <button className="h-10 lg-laptop:text-2xl xl-desktop:text-3xl lg-mobile:h-14 xl-desktop:h-20 w-full bg-green hover:bg-green-hover text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">
           {name}
         </button>
       </a>
