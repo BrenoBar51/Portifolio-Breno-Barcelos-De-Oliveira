@@ -53,6 +53,7 @@ export const Home: React.FC = () => {
       >
         <SectionBody
           title="Portfolio"
+          className="laptop:gap-x-10 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 lg-laptop:grid-cols-4"
           cards={[
             {
               title: "E-Commerce",
@@ -100,6 +101,7 @@ export const Home: React.FC = () => {
       >
         <SectionBody
           title="Skills"
+          className="laptop:gap-x-10 grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3"
           cards={[
             {
               title: "Front-End",

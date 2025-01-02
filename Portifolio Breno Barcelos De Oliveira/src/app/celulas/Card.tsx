@@ -25,7 +25,7 @@ export const Card: React.FC<CardProps> = ({ title, description, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="m-0 p-0 w-full block bg-gray-card hover:bg-gray-card-hover h-fit rounded-xl"
+      className="m-0 p-0 block bg-gray-card hover:bg-gray-card-hover h-fit rounded-xl"
     >
       <div className="container flex flex-col justify-center items-center m-0 p-8 rounded-lg transition duration-300 ease-in-out">
         <h2 className="text-2xl laptop:text-3xl xl-desktop:4xl font-bold text-white pb-6">
