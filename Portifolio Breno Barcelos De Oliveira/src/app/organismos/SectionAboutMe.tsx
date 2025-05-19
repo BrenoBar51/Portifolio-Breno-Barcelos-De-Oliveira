@@ -21,20 +21,23 @@ export const SectionAboutMe = () => {
           <p className="text-xl tablet:text-2xl laptop:text-3xl lg-laptop:text-4xl xl-desktop:5xl mb-4">Follow me here</p>
           <div className="flex justify-center space-x-4">
             <a
-              href="https://github.com/BrenoBar51"
-              className="text-description hover:text-white text-lg md:text-xl"
+              href="https://github.com/BrenoBarcelos"
+              target="_blank"
+              className="text-description hover:text-white text-lg md:text-xl border-2 rounded-full p-2"
             >
               <i className="text-lg tablet:text-xl laptop:text-xl lg-laptop:text-3xl xl-desktop:4xl">Github</i>
             </a>
             <a
               href="https://www.linkedin.com/in/breno-barcelos-de-oliveira/"
-              className="text-description hover:text-white text-lg md:text-xl"
+              target="_blank"
+              className="text-description hover:text-white text-lg md:text-xl border-2 rounded-full p-2"
             >
               <i className="text-lg tablet:text-xl laptop:text-xl lg-laptop:text-3xl xl-desktop:4xl">LinkedIn</i>
             </a>
             <a
               href="https://www.instagram.com/breno_barcelos04/"
-              className="text-description hover:text-white text-lg md:text-xl"
+              target="_blank"
+              className="text-description hover:text-white text-lg md:text-xl border-2 rounded-full p-2"
             >
               <i className="text-lg tablet:text-xl laptop:text-xl lg-laptop:text-3xl xl-desktop:4xl">Instagram</i>
             </a>
